@@ -1,0 +1,108 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-03-11T14:41:59.746Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1455759200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Steps.Hook.InitializeTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Login with correct username and password",
+        "description": "",
+        "id": "loginfeature;login-with-correct-username-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 630119000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Steps.Hook.TeardownTest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9810468000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I navigate to login page",
+            "match": {
+              "location": "Steps.loginsteps.iNavigateToLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 137654900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter the following details for login",
+            "match": {
+              "location": "Steps.loginsteps.iEnterTheFollowingDetailsForLogin(java.util.List\u003cjava.util.List\u003cjava.lang.String\u003e\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "username",
+                  "asad.zia@siparadigm.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "welcome123"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1891607900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "i click on login button",
+            "match": {
+              "location": "Steps.loginsteps.iClickOnLoginButton()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4367000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "i should see the dashboard page",
+            "match": {
+              "location": "Steps.loginsteps.iShouldSeeTheDashboardPage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "LoginFeature",
+    "description": "  This feature deals with login functionality",
+    "id": "loginfeature",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/Features/login.feature",
+    "tags": []
+  }
+]

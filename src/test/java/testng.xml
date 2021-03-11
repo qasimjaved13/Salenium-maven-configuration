@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite" verbose="10" configfailurepolicy="skip">
+
+    <listeners>
+        <listener class-name="Runner.Listeners"></listener>
+    </listeners>
+
+    <test name="Complete test run">
+        <classes>
+            <class name="Runner.TestRunner"></class>
+        </classes>
+    </test>
+    
+</suite>
