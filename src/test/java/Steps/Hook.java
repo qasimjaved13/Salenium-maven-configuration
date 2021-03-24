@@ -16,18 +16,18 @@ public class Hook extends BaseUtils {
 
     @Before
     public void InitializeTest(Scenario scenario) {
-
         ScenariosDef = base.features.createNode(scenario.getName());
-
         System.out.println("Opening the browser: Chrome");
         System.setProperty("webdriver.chrome.driver", "D:\\TestAutomation\\chromedriver_win32\\chromedriver.exe");
         base.Driver = new ChromeDriver();
+
     }
 
     @After
     public void TeardownTest() {
 
-        System.out.println("Close the Test");
+        System.out.println("teardown test");
         base.Driver.quit();
     }
+
 }

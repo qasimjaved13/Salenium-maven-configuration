@@ -52,10 +52,12 @@ public class Listeners implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
+
+        System.out.println("Start listeners");
         extentreport.Extentreport();
 
         //todo:Hardcoding the feature name
-        features = extentreport.extents.createTest(Feature.class, "Login Feature");
+        features = extentreport.extents.createTest(Feature.class, "Login Feature of Neovare Application");
     }
 
     @Override

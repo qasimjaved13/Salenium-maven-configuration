@@ -7,7 +7,6 @@ import com.aventstack.extentreports.GherkinKeyword;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 
 import java.util.List;
@@ -35,8 +34,8 @@ public class loginsteps extends BaseUtils {
         ScenariosDef.createNode(new GherkinKeyword("Then"), "i insert the login details");
         Map<String, String> mapTable = CucumberUtils.TableDictionaryConverter(table);
 
-        String usernamevalue = mapTable.get("username");        //adminusername
-        String passwordvalue = mapTable.get("password");        //adminpassword
+        String usernamevalue = mapTable.get("username");
+        String passwordvalue = mapTable.get("password");
         LoginPage page = new LoginPage(base.Driver);
         page.Login(usernamevalue, passwordvalue);
     }
@@ -53,6 +52,24 @@ public class loginsteps extends BaseUtils {
 
         ScenariosDef.createNode(new GherkinKeyword("Then"), "i should see dashboard page");
         Assert.assertEquals(base.Driver.getTitle(), "Test Questionnaire");
+    }
+
+    @And("I enter the following invalid details for login")
+    public void iEnterTheFollowingInvalidDetailsForLogin(List<List<String>> table) throws ClassNotFoundException {
+        ScenariosDef.createNode(new GherkinKeyword("Then"), "i insert the invalid login details");
+        Map<String, String> mapTable = CucumberUtils.TableDictionaryConverter(table);
+
+        String invalidusernamevalue = mapTable.get("username");        //admin
+        String invalidpasswordvalue = mapTable.get("password");        //admin
+        LoginPage page = new LoginPage(base.Driver);
+        page.Login(invalidusernamevalue, invalidpasswordvalue);
+
+    }
+
+    @Then("I should not see the dashboard page")
+    public void iShouldNotSeeTheDashboardPage() throws ClassNotFoundException {
+        ScenariosDef.createNode(new GherkinKeyword("Then"), "i should not see dashboard page");
+        Assert.assertEquals(base.Driver.getTitle(), "Log in!");
     }
 
 

@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 public class BaseUtils {
 
     public static WebDriver Driver;
-
     public ExtentReports extents;
     public static ExtentTest ScenariosDef;
     public static ExtentTest features;
