@@ -25,7 +25,7 @@ public class loginsteps extends BaseUtils {
     public void iNavigateToLoginPage() throws ClassNotFoundException {
         ScenariosDef.createNode(new GherkinKeyword("Then"), "i navigate to login page");
         System.out.println("I navigate to login page");
-        base.Driver.navigate().to("http://neovare.sipisb.com/en/login");
+        base.Driver.navigate().to("http://test.neovare.com/en/login");
         base.Driver.manage().window().maximize();
     }
 

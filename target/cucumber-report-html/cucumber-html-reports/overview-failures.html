@@ -77,7 +77,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Neovare Questionnaire</td>
         <td>1</td>
-      <td>24 Mar 2021, 12:46</td>
+      <td>25 May 2021, 20:23</td>
     </tr>
   </tbody>
 </table>
@@ -125,7 +125,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">9.828</span>
+  <span class="lead-duration duration">0.435</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -163,7 +163,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">Steps.Hook.InitializeTest(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">2.719</span>
+  <span class="lead-duration duration">2.643</span>
 
           </div>
 
@@ -196,11 +196,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">I navigate to login page</span>
 
-  <span class="lead-duration duration">9.827</span>
+  <span class="lead-duration duration">0.388</span>
 
 </div>
 
@@ -208,39 +208,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>org.openqa.selenium.WebDriverException:</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=89.0.4389.90)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'QASIMJAVED-PC', ip: '192.168.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.90, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Qasim\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:56806}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: bd35d1b124493b219da1f1e756f0c137
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.to(RemoteWebDriver.java:857)
-	at Steps.loginsteps.iNavigateToLoginPage(loginsteps.java:28)
-	at &#10045;.I navigate to login page(file:///C:/Users/Qasim/IdeaProjects/testing2/src/test/java/Features/login.feature:5)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -256,11 +223,11 @@ Session ID: bd35d1b124493b219da1f1e756f0c137
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And failed">
   <span class="keyword indention">And</span>
   <span class="name">I enter the following details for login</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.047</span>
 
 </div>
 
@@ -268,6 +235,46 @@ Session ID: bd35d1b124493b219da1f1e756f0c137
 
 
 
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>org.openqa.selenium.NoSuchElementException:</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;inputEmail&quot;]&quot;}
+  (Session info: chrome=90.0.4430.212)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'QASIMJAVED-PC', ip: '192.168.15.72', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.212, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\Qasim\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63654}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5f9e601b3dd09a58c74bae2968e6872f
+*** Element info: {Using=xpath, value=//*[@id=&quot;inputEmail&quot;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy21.sendKeys(Unknown Source)
+	at Pages.LoginPage.Login(LoginPage.java:25)
+	at Steps.loginsteps.iEnterTheFollowingDetailsForLogin(loginsteps.java:40)
+	at &#10045;.I enter the following details for login(file:///C:/Users/Qasim/IdeaProjects/testing2/src/test/java/Features/login.feature:6)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
           <table class="step-arguments">
@@ -369,7 +376,7 @@ Session ID: bd35d1b124493b219da1f1e756f0c137
             <span class="keyword indention">After</span>
               <span class="location name">Steps.Hook.TeardownTest()</span>
 
-  <span class="lead-duration duration">0.592</span>
+  <span class="lead-duration duration">0.625</span>
 
           </div>
 
