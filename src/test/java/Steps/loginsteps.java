@@ -15,6 +15,7 @@ import java.util.Map;
 public class loginsteps extends BaseUtils {
 
     private BaseUtils base;
+    LoginPage page = new LoginPage(base.Driver);
 
     public loginsteps(BaseUtils base) {
         this.base = base;
@@ -36,14 +37,14 @@ public class loginsteps extends BaseUtils {
 
         String usernamevalue = mapTable.get("username");
         String passwordvalue = mapTable.get("password");
-        LoginPage page = new LoginPage(base.Driver);
+        //LoginPage page = new LoginPage(base.Driver);
         page.Login(usernamevalue, passwordvalue);
     }
 
     @And("i click on login button")
     public void iClickOnLoginButton() throws ClassNotFoundException {
         ScenariosDef.createNode(new GherkinKeyword("And"), "i click on login button");
-        LoginPage page = new LoginPage(base.Driver);
+        //LoginPage page = new LoginPage(base.Driver);
         page.clickLoginButton();
     }
 
@@ -61,7 +62,7 @@ public class loginsteps extends BaseUtils {
 
         String invalidusernamevalue = mapTable.get("username");        //admin
         String invalidpasswordvalue = mapTable.get("password");        //admin
-        LoginPage page = new LoginPage(base.Driver);
+        //LoginPage page = new LoginPage(base.Driver);
         page.Login(invalidusernamevalue, invalidpasswordvalue);
 
     }
@@ -70,17 +71,6 @@ public class loginsteps extends BaseUtils {
     public void iShouldNotSeeTheDashboardPage() throws ClassNotFoundException {
         ScenariosDef.createNode(new GherkinKeyword("Then"), "i should not see dashboard page");
         Assert.assertEquals(base.Driver.getTitle(), "Log in!");
-    }
-
-
-    public class User {
-        public String username = null;
-        public String password = null;
-
-        public User(String userName, String passWord) {
-            this.username = userName;
-            this.password = passWord;
-        }
     }
 
 }
