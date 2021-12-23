@@ -5,7 +5,7 @@ Feature: LoginFeature
     Given I navigate to login page
     And I enter the following details for login
       | username | asad.zia@siparadigm.com |
-      | password | welcome123              |
+      | password | welcome1234             |
     And i click on login button
     Then i should see the dashboard page
 

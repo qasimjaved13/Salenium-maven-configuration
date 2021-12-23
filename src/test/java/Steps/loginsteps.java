@@ -1,6 +1,5 @@
 package Steps;
 
-
 import Base.BaseUtils;
 import Pages.LoginPage;
 import com.aventstack.extentreports.GherkinKeyword;
@@ -8,6 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 import java.util.Map;
@@ -16,6 +16,7 @@ public class loginsteps extends BaseUtils {
 
     private BaseUtils base;
     LoginPage page = new LoginPage(base.Driver);
+    SoftAssert sftassert=new SoftAssert();
 
     public loginsteps(BaseUtils base) {
         this.base = base;
@@ -37,14 +38,12 @@ public class loginsteps extends BaseUtils {
 
         String usernamevalue = mapTable.get("username");
         String passwordvalue = mapTable.get("password");
-        //LoginPage page = new LoginPage(base.Driver);
         page.Login(usernamevalue, passwordvalue);
     }
 
     @And("i click on login button")
     public void iClickOnLoginButton() throws ClassNotFoundException {
         ScenariosDef.createNode(new GherkinKeyword("And"), "i click on login button");
-        //LoginPage page = new LoginPage(base.Driver);
         page.clickLoginButton();
     }
 
@@ -52,7 +51,7 @@ public class loginsteps extends BaseUtils {
     public void iShouldSeeTheDashboardPage() throws ClassNotFoundException {
 
         ScenariosDef.createNode(new GherkinKeyword("Then"), "i should see dashboard page");
-        Assert.assertEquals(base.Driver.getTitle(), "Test Questionnaire");
+        sftassert.assertEquals(base.Driver.getTitle(), "Test Questionnaire");
     }
 
     @And("I enter the following invalid details for login")
@@ -62,7 +61,6 @@ public class loginsteps extends BaseUtils {
 
         String invalidusernamevalue = mapTable.get("username");        //admin
         String invalidpasswordvalue = mapTable.get("password");        //admin
-        //LoginPage page = new LoginPage(base.Driver);
         page.Login(invalidusernamevalue, invalidpasswordvalue);
 
     }
@@ -70,7 +68,7 @@ public class loginsteps extends BaseUtils {
     @Then("I should not see the dashboard page")
     public void iShouldNotSeeTheDashboardPage() throws ClassNotFoundException {
         ScenariosDef.createNode(new GherkinKeyword("Then"), "i should not see dashboard page");
-        Assert.assertEquals(base.Driver.getTitle(), "Log in!");
+        sftassert.assertEquals(base.Driver.getTitle(), "Log in!");
     }
 
 }
