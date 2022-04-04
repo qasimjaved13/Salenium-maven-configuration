@@ -10,6 +10,6 @@ public class BaseUtils {
     public ExtentReports extents;
     public static ExtentTest ScenariosDef;
     public static ExtentTest features;
-    public static String ReportLocation = "/D:/TestAutomation/Reports/";
+    public static String ReportLocation = "D:/Selenium/reports/";
 
 }
